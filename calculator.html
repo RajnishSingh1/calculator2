@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+         background-color: rgb(29, 28, 28);
+         margin-left: 30px;
+        }
+        button{
+            margin:5px 5px;
+            padding: 5px 10px;
+            border: none;
+            background-color: rgb(82, 81, 81);
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 100;
+            color: white;
+            font-size: 18px;
+        }
+            
+        #result{
+            width:195px;
+            text-align: right;
+            margin-left: 5px;
+            height: 25px;
+            background-color: rgb(82, 81, 81);
+          padding-right: 10px;
+          padding-top: 10px;
+          border-radius: 20px;
+          margin-bottom: 10px;
+          color: white;
+         font-size: 18px;
+         margin-top: 30px;
+         
+        }
+        .operator{
+            background-color: orange;
+            font-weight: 700;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <!-- <input name="output"> -->
+    <div class="output" id="result"></div>
+    <div>
+        <button onclick=" symbol('7')">7</button>
+        <button onclick=" symbol('8')">8</button>
+        <button onclick=" symbol('9')">9</button>
+        <button onclick=" symbol(' / ')" class=" operator">/</button>
+    </div>
+    <div>
+        <button onclick=" symbol('4')">4</button>
+        <button onclick=" symbol('5')">5</button>
+        <button onclick=" symbol('6')">6</button>
+        <button onclick=" symbol(' * ')" class=" operator">*</button>
+    </div>
+    <div>
+        <button onclick=" symbol('1')">1</button>
+        <button onclick=" symbol('2')">2</button>
+        <button onclick=" symbol('3')">3</button>
+        <button onclick=" symbol(' - ')" class=" operator">-</button>
+    </div>
+    <div>
+        <button onclick=" symbol('0')">0</button>
+        <button onclick=" symbol('.')">.</button>
+        <button onclick="
+         calculation = eval(calculation);
+         if(calculation == 'Infinity'){
+            alert('second number can not be zero')
+         }
+         else{
+            cal.innerHTML = calculation;
+         }
+         
+     
+        ">=</button>
+        <button onclick=" symbol(' + ')" class=" operator">+</button>
+    </div>
+    <div>
+        <button onclick="
+        calculation = '';  
+        cal.innerHTML = calculation;  
+        ">CR</button>
+    </div>
+ 
+    <script>
+      let cal = document.querySelector('.output')
+    //   let cal = document.querySelector('.output')
+          let calculation = ''
+        function symbol(x){
+               calculation += x;
+               console.log(calculation);
+               cal.innerHTML = calculation;
+            // cal.value = calculation;
+               
+        }
+        function evaluate(){
+            
+        }
+    </script>
+  
+</body>
+</html>
